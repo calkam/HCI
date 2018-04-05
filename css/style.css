@@ -1,0 +1,38 @@
+.featured-box{
+	background: transparent linear-gradient(to bottom, #FFF 1%, #FCFCFC 98%) repeat scroll 0px 0px;
+	padding: 0px 20px 20px;
+	margin: 30px 0px;
+	box-sizing: border-box;
+	border-width: 5px 1px 1px;
+	border-style: solid;
+	border-color: #bdc3c7 #ECECEC #DFDFDF;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.1);
+	z-index: 1;
+	padding-top: 5px;
+}
+
+.actuality_icon{
+	width : 90px;
+	height : 90px;
+	border-radius: 45px;
+}
+
+.featured-box-body{
+	padding-left: 15px;
+	border: solid 1px #333;
+}
+
+.comment{
+	border: solid 1px #333;
+	padding-left: 10px;
+	margin-top: 5px;
+}
+
+.comment-lists{
+	margin-top: 10px;
+	height: 300px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}

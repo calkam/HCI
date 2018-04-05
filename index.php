@@ -1,3 +1,54 @@
+<?php
+    session_start();
+
+    $_SESSION["USER"] = "calkam";
+
+    if(!isset($_SESSION["article"])){
+        $_SESSION["article"] = array(
+            "1" => array(
+                "icon"       => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Grosser_Panda.JPG/1200px-Grosser_Panda.JPG",
+                "author"     => "calkam",
+                "date"       => "05/04/2018",
+                "grade"      => 4,
+                "title"      => "First article",
+                "abstract"   => "Montius nos tumore inusitato",
+                "your_grade" => 2,
+                "comments"    =>
+                    array(
+                        array(
+                            "author"  => "calkam",
+                            "comment" => "very good"
+                        ),
+                        array(
+                            "author"  => "riouseb",
+                            "comment" => "very very good"
+                        ),
+                    )
+            ),
+            "2" => array(
+                "icon"       => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Grosser_Panda.JPG/1200px-Grosser_Panda.JPG",
+                "author"     => "calkam",
+                "date"       => "05/04/2018",
+                "grade"      => 4,
+                "title"      => "First article",
+                "abstract"   => "Montius nos tumore inusitato",
+                "your_grade" => 3,
+                "comments"    =>
+                    array(
+                        array(
+                            "author"  => "calkam",
+                            "comment" => "very good"
+                        ),
+                        array(
+                            "author"  => "riouseb",
+                            "comment" => "very very good"
+                        ),
+                    )
+            )
+        );
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,6 +70,8 @@
 
     <!-- Custom CSS -->
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
     <link href="vendor/morrisjs/morris.css" rel="stylesheet">
@@ -276,10 +329,10 @@
                             </div>
                         </li> -->
                         <li>
-                            <a href=".?page=actuality"><i class="fa fa-dashboard fa-fw"></i> Actuality</a>
+                            <a href=".?page=actuality"><i class="fa fa-columns fa-fw"></i> Actuality</a>
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Paper search</a>
+                            <a href="index.html"><i class="fa fa-paper fa-fw"></i> Paper search</a>
                         </li>
                         <li>
                             <a href="tables.html"><i class="fa fa-table fa-fw"></i> My papers</a>
@@ -308,7 +361,7 @@
                 if(!isset($_GET["page"])){
                     $_GET["page"] = "actuality";
                 }
-                include("pages/".$_GET["page"].".html");
+                include("pages/".$_GET["page"].".php");
             ?>
         </div>
         <!-- /#page-wrapper -->
