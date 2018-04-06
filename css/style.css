@@ -14,9 +14,24 @@
 }
 
 .actuality_icon{
-	width : 90px;
-	height : 90px;
-	border-radius: 45px;
+	border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+	.actuality_icon{
+		width: 60%;
+		height: 60%;
+		margin-top: 10px;
+		margin-left: 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	.actuality_icon{
+		width: 100%;
+		height: 100%;
+		margin-top: 20px;
+	}
 }
 
 .featured-box-body{
@@ -35,4 +50,21 @@
 	height: 300px;
 	overflow-y: auto;
 	overflow-x: hidden;
+}
+
+.fa.fa-star{
+ }
+
+.fa.custom-fa{
+ color: transparent;
+ -webkit-text-stroke-width: 1px;
+ -webkit-text-stroke-color: #333;
+}
+
+ul a{
+	color: #333;
+}
+
+#info_biblio{
+	visibility: hidden;
 }

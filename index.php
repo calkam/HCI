@@ -1,12 +1,13 @@
 <?php
+    session_destroy();
     session_start();
 
     $_SESSION["USER"] = "calkam";
 
-    if(!isset($_SESSION["article"])){
+    //if(!isset($_SESSION["article"])){
         $_SESSION["article"] = array(
             "1" => array(
-                "icon"       => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Grosser_Panda.JPG/1200px-Grosser_Panda.JPG",
+                "icon"       => "https://static.alipson.fr/ravensburger.17/ravensburger-puzzle-500-pices-carr--petit-panda.154140-1.550.jpg",
                 "author"     => "calkam",
                 "date"       => "05/04/2018",
                 "grade"      => 4,
@@ -26,7 +27,7 @@
                     )
             ),
             "2" => array(
-                "icon"       => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Grosser_Panda.JPG/1200px-Grosser_Panda.JPG",
+                "icon"       => "https://static.alipson.fr/ravensburger.17/ravensburger-puzzle-500-pices-carr--petit-panda.154140-1.550.jpg",
                 "author"     => "calkam",
                 "date"       => "05/04/2018",
                 "grade"      => 4,
@@ -44,6 +45,31 @@
                             "comment" => "very very good"
                         ),
                     )
+            )
+        );
+    //}
+
+    if(!isset($_SESSION["bibliography"])){
+        $_SESSION["bibliography"] = array(
+            "1" => array(
+                "title"  => " global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author" => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "date"   => "2005",
+            ),
+            "2" => array(
+                "title"  => " global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author" => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "date"   => "2005",
+            ),
+            "3" => array(
+                "title"  => " global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author" => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "date"   => "2005",
+            ),
+            "4" => array(
+                "title"  => " global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author" => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "date"   => "2005",
             )
         );
     }
@@ -71,13 +97,13 @@
     <!-- Custom CSS -->
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
 
-    <link href="css/style.css" rel="stylesheet">
-
     <!-- Morris Charts CSS -->
     <link href="vendor/morrisjs/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -106,135 +132,6 @@
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-messages">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>Read All Messages</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-messages -->
-                </li>
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-tasks">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 1</strong>
-                                        <span class="pull-right text-muted">40% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                            <span class="sr-only">40% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 2</strong>
-                                        <span class="pull-right text-muted">20% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                            <span class="sr-only">20% Complete</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 3</strong>
-                                        <span class="pull-right text-muted">60% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                            <span class="sr-only">60% Complete (warning)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 4</strong>
-                                        <span class="pull-right text-muted">80% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                            <span class="sr-only">80% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Tasks</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-tasks -->
-                </li>
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -329,25 +226,25 @@
                             </div>
                         </li> -->
                         <li>
-                            <a href=".?page=actuality"><i class="fa fa-columns fa-fw"></i> Actuality</a>
+                            <a href=".?page=actuality"><i class="fa fa-tv fa-fw"></i> Actuality</a>
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-paper fa-fw"></i> Paper search</a>
+                            <a href="index.html"><i class="fa fa-search fa-fw"></i> Paper search</a>
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> My papers</a>
+                            <a href="tables.html"><i class="fa fa-file  fa-fw"></i> My papers</a>
                         </li>
                         <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Bibliography</a>
+                            <a href=".?page=bibliography"><i class="fa fa-book fa-fw"></i> Bibliography</a>
                         </li>
                         <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Book Lists</a>
+                            <a href="forms.html"><i class="fa fa-list  fa-fw"></i> Book Lists</a>
                         </li>
                         <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Calendar</a>
+                            <a href="forms.html"><i class="fa fa-calendar fa-fw"></i> Calendar</a>
                         </li>
                         <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Friends</a>
+                            <a href="forms.html"><i class="fa fa-users fa-fw"></i> Friends</a>
                         </li>
                     </ul>
                 </div>
@@ -371,6 +268,8 @@
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
+
+    <script src="js/script.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
