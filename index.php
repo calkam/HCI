@@ -4,7 +4,7 @@
 
     $_SESSION["USER"] = "calkam";
 
-    //if(!isset($_SESSION["article"])){
+    if(!isset($_SESSION["article"])){
         $_SESSION["article"] = array(
             "1" => array(
                 "icon"       => "https://static.alipson.fr/ravensburger.17/ravensburger-puzzle-500-pices-carr--petit-panda.154140-1.550.jpg",
@@ -47,32 +47,203 @@
                     )
             )
         );
-    //}
+    }
 
-    if(!isset($_SESSION["bibliography"])){
+    //if(!isset($_SESSION["bibliography"])){
         $_SESSION["bibliography"] = array(
             "1" => array(
-                "title"  => " global assessment tool for evaluation of intra-operative laparoscopic skills",
-                "author" => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
-                "date"   => "2005",
+                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "journal"   => "The American journal of surgery",
+                "volume"    => "190",
+                "number"    => "1",
+                "pages"     => "107--113",
+                "date"      => "2005",
+                "publisher" => "Elsevier"
             ),
             "2" => array(
-                "title"  => " global assessment tool for evaluation of intra-operative laparoscopic skills",
-                "author" => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
-                "date"   => "2005",
+                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "journal"   => "The American journal of surgery",
+                "volume"    => "190",
+                "number"    => "1",
+                "pages"     => "107--113",
+                "date"      => "2005",
+                "publisher" => "Elsevier"
             ),
             "3" => array(
-                "title"  => " global assessment tool for evaluation of intra-operative laparoscopic skills",
-                "author" => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
-                "date"   => "2005",
+                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "journal"   => "The American journal of surgery",
+                "volume"    => "190",
+                "number"    => "1",
+                "pages"     => "107--113",
+                "date"      => "2005",
+                "publisher" => "Elsevier"
             ),
             "4" => array(
-                "title"  => " global assessment tool for evaluation of intra-operative laparoscopic skills",
-                "author" => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
-                "date"   => "2005",
+                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "journal"   => "The American journal of surgery",
+                "volume"    => "190",
+                "number"    => "1",
+                "pages"     => "107--113",
+                "date"      => "2005",
+                "publisher" => "Elsevier"
+            ),
+            "5" => array(
+                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "journal"   => "The American journal of surgery",
+                "volume"    => "190",
+                "number"    => "1",
+                "pages"     => "107--113",
+                "date"      => "2005",
+                "publisher" => "Elsevier"
+            ),
+            "6" => array(
+                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "journal"   => "The American journal of surgery",
+                "volume"    => "190",
+                "number"    => "1",
+                "pages"     => "107--113",
+                "date"      => "2005",
+                "publisher" => "Elsevier"
+            ),
+            "7" => array(
+                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "journal"   => "The American journal of surgery",
+                "volume"    => "190",
+                "number"    => "1",
+                "pages"     => "107--113",
+                "date"      => "2005",
+                "publisher" => "Elsevier"
+            ),
+            "8" => array(
+                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "journal"   => "The American journal of surgery",
+                "volume"    => "190",
+                "number"    => "1",
+                "pages"     => "107--113",
+                "date"      => "2005",
+                "publisher" => "Elsevier"
+            ),
+            "9" => array(
+                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "journal"   => "The American journal of surgery",
+                "volume"    => "190",
+                "number"    => "1",
+                "pages"     => "107--113",
+                "date"      => "2005",
+                "publisher" => "Elsevier"
+            ),
+            "10" => array(
+                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "journal"   => "The American journal of surgery",
+                "volume"    => "190",
+                "number"    => "1",
+                "pages"     => "107--113",
+                "date"      => "2005",
+                "publisher" => "Elsevier"
+            ),
+            "11" => array(
+                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "journal"   => "The American journal of surgery",
+                "volume"    => "190",
+                "number"    => "1",
+                "pages"     => "107--113",
+                "date"      => "2005",
+                "publisher" => "Elsevier"
+            ),
+            "12" => array(
+                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "journal"   => "The American journal of surgery",
+                "volume"    => "190",
+                "number"    => "1",
+                "pages"     => "107--113",
+                "date"      => "2005",
+                "publisher" => "Elsevier"
+            ),
+            "13" => array(
+                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "journal"   => "The American journal of surgery",
+                "volume"    => "190",
+                "number"    => "1",
+                "pages"     => "107--113",
+                "date"      => "2005",
+                "publisher" => "Elsevier"
+            ),
+            "14" => array(
+                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "journal"   => "The American journal of surgery",
+                "volume"    => "190",
+                "number"    => "1",
+                "pages"     => "107--113",
+                "date"      => "2005",
+                "publisher" => "Elsevier"
+            ),
+            "15" => array(
+                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "journal"   => "The American journal of surgery",
+                "volume"    => "190",
+                "number"    => "1",
+                "pages"     => "107--113",
+                "date"      => "2005",
+                "publisher" => "Elsevier"
+            ),
+            "16" => array(
+                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "journal"   => "The American journal of surgery",
+                "volume"    => "190",
+                "number"    => "1",
+                "pages"     => "107--113",
+                "date"      => "2005",
+                "publisher" => "Elsevier"
+            ),
+            "17" => array(
+                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "journal"   => "The American journal of surgery",
+                "volume"    => "190",
+                "number"    => "1",
+                "pages"     => "107--113",
+                "date"      => "2005",
+                "publisher" => "Elsevier"
+            ),
+            "18" => array(
+                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "journal"   => "The American journal of surgery",
+                "volume"    => "190",
+                "number"    => "1",
+                "pages"     => "107--113",
+                "date"      => "2005",
+                "publisher" => "Elsevier"
+            ),
+            "19" => array(
+                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
+                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
+                "journal"   => "The American journal of surgery",
+                "volume"    => "190",
+                "number"    => "1",
+                "pages"     => "107--113",
+                "date"      => "2005",
+                "publisher" => "Elsevier"
             )
+
         );
-    }
+    // }
 
 ?>
 <!DOCTYPE html>

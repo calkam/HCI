@@ -68,3 +68,15 @@ ul a{
 #info_biblio{
 	visibility: hidden;
 }
+
+.dontseeninfo{
+	display: none;
+}
+
+#info_note_biblio{
+	display: none;
+}
+
+#info_tag_biblio{
+	display: none;
+}
