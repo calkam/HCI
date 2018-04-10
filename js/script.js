@@ -48,6 +48,51 @@ $( document ).ready(function() {
         $("#note_info_biblio").append(
             '<div class="row"><div class="col-lg-12"><div class="panel panel-default"><div class="panel-body">' + $("#textNote").val() + '</div></div></div></div>'
         );
+
+        $("#textNote").val("");
+    });
+
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    $("#putTag").click(function(){
+        $.ajax({
+            url      : "js/tag.php",
+            cache    : false,
+            dataType : "json",
+            error    : function(request, error) { // Info Debuggage si erreur
+                       alert("Erreur : responseText: "+request.responseText);
+                     },
+            success  : function(data) {
+
+                var found = false;
+
+                for(var k in data) {
+                    if(k == $("#textTag").val()){
+                        $("#tag_info_biblio").append(
+                            '<li><i style="color:'+ data[k] +';" class="fa fa-tag"></i>' + $("#textTag").val() + '</li>'
+                        );
+                        found=true;
+                        break;
+                    }
+                }
+
+                if(!found){
+                    $("#tag_info_biblio").append(
+                        '<li><i style="color:'+ getRandomColor() +';" class="fa fa-tag"></i>' + $("#textTag").val() + '</li>'
+                    );
+                }
+
+                $("#textTag").val("");
+
+            }
+         });
     });
 
     var infoPos   = $("#info_biblio").offset().top;

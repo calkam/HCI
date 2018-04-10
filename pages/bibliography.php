@@ -112,13 +112,38 @@
 
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
 
                                 <div id="info_tag_biblio">
                                     <div class="row" style="margin-top:20px;">
-                                        <div class="col-lg-12 text-left">
+                                        <div class="col-lg-12">
+
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <ul class="list-unstyled" id="tag_info_biblio">
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg-12">
+
+                                                    <div class="input-group">
+                                                        <input type="text" id="textTag"class="form-control" placeholder="Note...">
+                                                        <span class="input-group-btn">
+                                                            <button id="putTag" class="btn btn-default" type="button">
+                                                                <i class="fa fa-tags"></i>
+                                                            </button>
+                                                        </span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>

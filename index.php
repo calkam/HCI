@@ -49,7 +49,7 @@
         );
     }
 
-    //if(!isset($_SESSION["bibliography"])){
+    if(!isset($_SESSION["bibliography"])){
         $_SESSION["bibliography"] = array(
             "1" => array(
                 "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
@@ -62,14 +62,14 @@
                 "publisher" => "Elsevier"
             ),
             "2" => array(
-                "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
-                "author"    => "M.C. Vassiliou, L.S. Feldman, C.G. Andrew, S. Bergman, K. Leffondre, D. Stanbridge, and G. M.Fried.",
-                "journal"   => "The American journal of surgery",
-                "volume"    => "190",
-                "number"    => "1",
-                "pages"     => "107--113",
-                "date"      => "2005",
-                "publisher" => "Elsevier"
+                "title"     => "Navigation augmented fluorescence in-formations for the laparoscopic surgeryrobot-assisted",
+                "author"    => "A. Agustinos.",
+                "journal"   => "Thesis",
+                "volume"    => "228",
+                "number"    => "2",
+                "pages"     => "120--130",
+                "date"      => "2016",
+                "publisher" => "UGA"
             ),
             "3" => array(
                 "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
@@ -243,7 +243,13 @@
             )
 
         );
-    // }
+    }
+
+    $_SESSION["tag"] = array(
+        "medical"       => "green",
+        "cami"          => "blue",
+        "tool tracking" => "red",
+    )
 
 ?>
 <!DOCTYPE html>

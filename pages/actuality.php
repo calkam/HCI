@@ -11,6 +11,23 @@
     if(isset($_POST["btn-grade"])){
         $_SESSION["article"][$_POST["article_id"]]["your_grade"] = intval($_POST["grade"]);
     }
+
+    if(isset($_POST["btn-add-biblio"])){
+
+        $article = array(
+            "title"     => $_POST["title"],
+            "author"    => $_POST["author"],
+            "journal"   => $_POST["journal"],
+            "volume"    => $_POST["volume"],
+            "number"    => $_POST["number"],
+            "pages"     => $_POST["pages"],
+            "date"      => $_POST["date"],
+            "publisher" => $_POST["publisher"]
+        );
+
+        array_push($_SESSION["bibliography"], $article);
+    }
+
 ?>
 
 <div class="container">
@@ -102,12 +119,22 @@
             				<div class="col-lg-12">
             					<div class="featured-box-comment">
 
-                                    <div class="row"> <!-- button comment -->
+                                    <div class="row">
                                         <div class="col-lg-6 col-xs-6">
                                             <div class="btn-group" role="group" aria-label="">
-                                                <button type="button" class="btn btn-default">Add to Bibliography</button>
-                                                <button type="button" class="btn btn-default">Share</button>
-                                                <button type="button" class="btn btn-default">Download</button>
+                                                <form action="./?pages=actuality#<?php echo "article".$k; ?>" method="post">
+                                                    <input type="hidden" name="title" value="J'ai ete ajouter">
+                                                    <input type="hidden" name="author" value="par moi">
+                                                    <input type="hidden" name="journal" value="test">
+                                                    <input type="hidden" name="volume" value="test">
+                                                    <input type="hidden" name="number" value="8000">
+                                                    <input type="hidden" name="pages" value="42">
+                                                    <input type="hidden" name="date" value="1970">
+                                                    <input type="hidden" name="publisher" value="The Boss">
+                                                    <button type="submit" name="btn-add-biblio" class="btn btn-default">Add to Bibliography</button>
+                                                    <button type="button" class="btn btn-default">Share</button>
+                                                    <button type="button" class="btn btn-default">Download</button>
+                                                </form>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
@@ -131,7 +158,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row"> <!-- lists of comments -->
+                                    <div class="row">
                                         <div class="col-lg-10">
                                             <div class="comment-lists">
 
