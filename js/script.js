@@ -52,6 +52,32 @@ $( document ).ready(function() {
         $("#textNote").val("");
     });
 
+    $('#generateBiblio').submit(function(){
+        var checked = $(".mustGenerated:checked").length;
+
+        console.log(checked);
+
+        if (checked == 0) {
+            $("body").append('<div class="text-center alert alert-danger alert-dismissible navbar-fixed-bottom" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>You have not select article to generate.</div>');
+            return false;
+        } else {
+            return true;
+        }
+
+    });
+
+    $("#comment-form").submit(function(){
+        if($("#comment-text").val() == ""){
+            $("#comment-formular").addClass("has-error");
+            return false;
+        }
+        return true;
+    });
+
+    $("*").click(function(){
+        $(".alert").remove();
+    });
+
     function getRandomColor() {
         var letters = '0123456789ABCDEF';
         var color = '#';
@@ -95,13 +121,19 @@ $( document ).ready(function() {
          });
     });
 
+    $("#allcheck").click( function(){
+        if( $(this).is(':checked') ){
+            $(".mustGenerated").prop("checked", true);
+        }else{
+            $(".mustGenerated").prop("checked", false);
+        }
+    });
+
     var infoPos   = $("#info_biblio").offset().top;
     var parentPos = $("#info_biblio").parent().offset().top;
 
     $(window).scroll(function () {
         var windowPos = $(window).scrollTop();
-
-        console.log(windowPos);
 
         if(windowPos > infoPos){
             $("#info_biblio").css({

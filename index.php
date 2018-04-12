@@ -50,6 +50,7 @@
     }
 
     if(!isset($_SESSION["bibliography"])){
+        $_SESSION["numberArticle"] = 19;
         $_SESSION["bibliography"] = array(
             "1" => array(
                 "title"     => "A global assessment tool for evaluation of intra-operative laparoscopic skills",
@@ -249,7 +250,15 @@
         "medical"       => "green",
         "cami"          => "blue",
         "tool tracking" => "red",
-    )
+    );
+
+    if(!isset($_SESSION["directory"])){
+        $_SESSION["directory"] = array(
+            "All" => array(),
+            "medical" => array(1, 2, 3, 5, 7, 8),
+            "tool tracking" => array(6, 9, 10, 11, 12)
+        );
+    }
 
 ?>
 <!DOCTYPE html>
@@ -296,7 +305,7 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <nav  class="navbar navbar-default nav-bar-top navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -304,7 +313,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SciPortal</a>
+                <a class="navbar-brand" style="margin-top: -10px;" href="?pages=actuality">
+                    <img src="image/logo.png" class="img-responsive" style="height: 220%;" />
+                </a>
             </div>
             <!-- /.navbar-header -->
 
@@ -402,26 +413,26 @@
                             </span>
                             </div>
                         </li> -->
-                        <li>
-                            <a href=".?page=actuality"><i class="fa fa-tv fa-fw"></i> Actuality</a>
+                        <li class="element-menu">
+                            <a class="element-link" href=".?pages=actuality"><i class="fa fa-tv fa-fw"></i> Actuality</a>
                         </li>
-                        <li>
-                            <a href="index.html"><i class="fa fa-search fa-fw"></i> Paper search</a>
+                        <li class="element-menu">
+                            <a class="element-link" href="#"><i class="fa fa-search fa-fw"></i> Paper search</a>
                         </li>
-                        <li>
-                            <a href="tables.html"><i class="fa fa-file  fa-fw"></i> My papers</a>
+                        <li class="element-menu">
+                            <a class="element-link" href="#"><i class="fa fa-file  fa-fw"></i> My papers</a>
                         </li>
-                        <li>
-                            <a href=".?page=bibliography"><i class="fa fa-book fa-fw"></i> Bibliography</a>
+                        <li class="element-menu">
+                            <a class="element-link" href=".?pages=bibliography"><i class="fa fa-book fa-fw"></i> Bibliography</a>
                         </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-list  fa-fw"></i> Book Lists</a>
+                        <li class="element-menu">
+                            <a class="element-link" href="#"><i class="fa fa-list  fa-fw"></i> Book Lists</a>
                         </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-calendar fa-fw"></i> Calendar</a>
+                        <li class="element-menu">
+                            <a class="element-link" href="#"><i class="fa fa-calendar fa-fw"></i> Calendar</a>
                         </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-users fa-fw"></i> Friends</a>
+                        <li class="element-menu">
+                            <a class="element-link" href="#"><i class="fa fa-users fa-fw"></i> Friends</a>
                         </li>
                     </ul>
                 </div>
@@ -432,10 +443,10 @@
 
         <div id="page-wrapper">
             <?php
-                if(!isset($_GET["page"])){
-                    $_GET["page"] = "actuality";
+                if(!isset($_GET["pages"])){
+                    $_GET["pages"] = "actuality";
                 }
-                include("pages/".$_GET["page"].".php");
+                include("pages/".$_GET["pages"].".php");
             ?>
         </div>
         <!-- /#page-wrapper -->

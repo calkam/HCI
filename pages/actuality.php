@@ -25,7 +25,8 @@
             "publisher" => $_POST["publisher"]
         );
 
-        array_push($_SESSION["bibliography"], $article);
+        $_SESSION["numberArticle"]++;
+        $_SESSION["bibliography"][$_SESSION["numberArticle"]] = $article;
     }
 
 ?>
@@ -74,7 +75,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-xs-2 col-xs-push-1 col-lg-4">
+                                        <div class="col-xs-2 col-xs-push-1 col-lg-4 text-right">
                                             <div class="row" style="margin-top: 20px">
                                                 <div class="col-lg-12">
                                                     <div class="hidden-xs hidden-sm">
@@ -142,7 +143,8 @@
                                                 <div class="col-lg-12">
                                                     <form class="form-inline" action="./?pages=actuality#<?php echo "article".$k; ?>" method="post">
                                                         <input type="hidden" name="article_id" value="<?php echo $k; ?>">
-                                                        <select name="grade" class="form-control">
+                                                        <label for="Grade" class="control-label">Choose Grade:</label>
+                                                        <select style="width: 70%;" name="grade" class="form-control">
                                                             <option value="1" <?php if($v[your_grade] == 1) echo "selected"; ?> >1</option>
                                                             <option value="2" <?php if($v[your_grade] == 2) echo "selected"; ?> >2</option>
                                                             <option value="3" <?php if($v[your_grade] == 3) echo "selected"; ?> >3</option>
@@ -159,7 +161,7 @@
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-lg-10">
+                                        <div class="col-lg-12">
                                             <div class="comment-lists">
 
                                                 <?php
@@ -168,9 +170,11 @@
 
                                                 <div class="row">
                                                     <div class="col-lg-12">
-                                                        <div class="comment">
-                                                            <h4><?php echo $v2["author"]; ?></h4>
-                                                            <p><?php echo $v2["comment"]; ?></p>
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-body">
+                                                                <h4><?php echo $v2["author"]; ?></h4>
+                                                                <p><?php echo $v2["comment"]; ?></p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -183,12 +187,12 @@
                                         </div>
                                     </div>
 
-                                    <form class="form-inline" action="./?pages=actuality#<?php echo "article".$k; ?>" method="post">
+                                    <form class="form-inline" id="comment-form" action="./?pages=actuality#<?php echo "article".$k; ?>" method="post">
                                         <div class="row">
-                                            <div class="form-group col-lg-10">
+                                            <div id="comment-formular" class="form-group col-lg-12">
                                                 <input type="hidden" name="article_id" value="<?php echo $k; ?>">
                                                 <input type="hidden" name="user" value="<?php echo $_SESSION["USER"]; ?>">
-                                                <input type="text" value="" class="form-control" name="comment" placeholder="Comment...">
+                                                <input type="text" style="width:95%;" value="" class="form-control" id="comment-text" name="comment" placeholder="Comment..." required>
                                                 <button type="submit" name="btn-comment" class="btn btn-default" type="button">
                                                     <i class="fa fa-comment"></i>
                                                 </button>

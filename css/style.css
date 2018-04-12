@@ -5,12 +5,56 @@
 	box-sizing: border-box;
 	border-width: 5px 1px 1px;
 	border-style: solid;
-	border-color: #bdc3c7 #ECECEC #DFDFDF;
+	border-color: #4dd0e1 #ECECEC #DFDFDF;
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
 	box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.1);
 	z-index: 1;
 	padding-top: 5px;
+}
+
+.element-menu{
+	height: 50px;
+}
+
+.alert{
+	margin-bottom: 0px !important;
+}
+
+.element-link{
+	height: 50px;
+	padding-top: 15px !important;
+}
+
+.nav-bar-top{
+	background-color: #4dd0e1;
+	border-color: #4dd0e1;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #4dd0e1;
+    border-color: #4dd0e1;
+}
+
+.btn-primary:hover{
+	color: #fff;
+    background-color: #4dd0ff;
+    border-color: #4dd0e1;
+}
+
+.btn-primary:active,
+.btn-primary.active{
+	color: #fff;
+    background-color: #4dd0ff;
+    border-color: #4dd0e1;
+}
+
+.btn-primary:focus,
+.btn-primary.focus{
+	color: #fff;
+    background-color: #4dd0ff;
+    border-color: #4dd0e1;
 }
 
 .actuality_icon{
@@ -36,13 +80,17 @@
 
 .featured-box-body{
 	padding-left: 15px;
-	border: solid 1px #333;
+	border: solid 1px #4dd0e1;
 }
 
 .comment{
 	border: solid 1px #333;
 	padding-left: 10px;
 	margin-top: 5px;
+}
+
+.fa-star{
+	color:#333;
 }
 
 .comment-lists{
@@ -53,7 +101,10 @@
 }
 
 .fa.fa-star{
- }
+color: transparent;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: #4dd0e1;
+}
 
 .fa.custom-fa{
  color: transparent;
